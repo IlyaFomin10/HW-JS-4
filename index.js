@@ -25,7 +25,20 @@ for (let i = 1; i < 11; i += 2) {
   console.log(`${i} – нечетное число`);
   console.log(`${i + 1} – четное число`);
 }
-
+// Task2
 array = [1, 2, 3, 4, 5, 6, 7];
 array.splice(3, 2);
 console.log(array);
+// Task3
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+arr = Array(5);
+for (let index = 0; index < arr.length; index++) {
+  arr[index] = getRandomInt(0, 9);
+}
+console.log(arr);
+console.log(arr.reduce((f, el) => f + el));
+let min = Math.min(...arr);
+console.log(min);
+console.log(arr.includes(3));
